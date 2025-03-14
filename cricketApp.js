@@ -38,16 +38,17 @@ const game = {
   },
 };
 //1. Create one player array for each team (variables 'players1' and 'players2')
+//Solution: Destructuring
 let [players1, players2] = game.players;
 console.log(players1);
 console.log(players2);
 
 //2. The first player in any player array is the wicketkeeper and the others are field players.
-//For India (team 1) create one variable ('Ind') with the wicketkeeper name,
+//For India (team 1) create one variable ('captain') with the wicketkeeper name,
 //and one array ('fieldPlayers') with all the remaining 10 field players
-
-let [Ind, ...fieldPlayers] = players1;
-console.log("Ind", Ind);
+//Solution: rest operator
+let [captain, ...fieldPlayers] = players1;
+console.log("captain", captain);
 console.log("fieldPlayers", fieldPlayers);
 
 //3. Create an array 'allPlayers' containing all players of both teams (22 players)
